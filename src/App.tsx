@@ -1,4 +1,5 @@
 import CardList from './components/CardList'
+import Rodape from './components/Footer'
 import Hero from './components/Hero'
 import { GlobalStyles } from './styles'
 
@@ -10,6 +11,7 @@ function App() {
       <div className="container">
         <CardList />
       </div>
+      <Rodape />
     </>
   )
 }

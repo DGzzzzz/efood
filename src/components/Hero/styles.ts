@@ -9,6 +9,7 @@ export const HeroFundo = style.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 80px;
 `
 
 export const HeroTitle = style.h1`
