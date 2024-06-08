@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 import { TagContainerGroup } from '../Tag/styles'
 import { NotaContainer } from '../Nota/styles'
+import { Link } from 'react-router-dom'
 
 export const CardContainer = styled.div`
   width: 472px;
@@ -30,7 +31,7 @@ export const ContainerConteudo = styled.div`
   }
 `
 
-export const Button = styled.a`
+export const Button = styled(Link)`
   background-color: ${cores.corTexto};
   color: ${cores.corFundo};
   width: 82px;

@@ -32,7 +32,7 @@ const Card = ({
       <ContainerConteudo>
         <h3>{title}</h3>
         <p>{description}</p>
-        <Button href="#">Saiba mais</Button>
+        <Button to="/restaurantes">Saiba mais</Button>
       </ContainerConteudo>
     </CardContainer>
   )
