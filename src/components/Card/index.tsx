@@ -1,24 +1,40 @@
 import { Button, CardContainer, ContainerConteudo } from './styles'
-import comida1 from '../../assets/images/comida1.png'
+
 import Tag from '../Tag'
 import Nota from '../Nota'
+import { TagContainerGroup } from '../Tag/styles'
 
-const Card = () => (
-  <CardContainer>
-    <img src={comida1} alt="" />
-    <Tag size="small">Japonesa</Tag>
-    <Nota />
-    <ContainerConteudo>
-      <h3>Hioki Sushi</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eligendi
-        soluta modi beatae, cupiditate, vero autem magni repellendus aspernatur
-        et, voluptate quia ratione! Nobis rerum sapiente animi hic iusto
-        ratione?
-      </p>
-      <Button href="#">Saiba mais</Button>
-    </ContainerConteudo>
-  </CardContainer>
-)
+type Props = {
+  title: string
+  category: string
+  description: string
+  nota: string
+  image: string
+  destaque?: boolean
+}
 
+const Card = ({
+  title,
+  category,
+  description,
+  nota,
+  image,
+  destaque
+}: Props) => {
+  return (
+    <CardContainer>
+      <img src={image} alt={title} />
+      <TagContainerGroup>
+        {destaque && <Tag>Destaque do dia</Tag>}
+        <Tag>{category}</Tag>
+      </TagContainerGroup>
+      <Nota value={nota} />
+      <ContainerConteudo>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <Button href="#">Saiba mais</Button>
+      </ContainerConteudo>
+    </CardContainer>
+  )
+}
 export default Card

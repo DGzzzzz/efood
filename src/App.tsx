@@ -1,18 +1,14 @@
-import CardList from './components/CardList'
-import Rodape from './components/Footer'
-import Hero from './components/Hero'
+import { BrowserRouter } from 'react-router-dom'
 import { GlobalStyles } from './styles'
+
+import Rotas from './routes'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyles />
-      <Hero />
-      <div className="container">
-        <CardList />
-      </div>
-      <Rodape />
-    </>
+      <Rotas />
+    </BrowserRouter>
   )
 }
 

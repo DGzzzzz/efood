@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
-import { TagContainer } from '../Tag/styles'
+import { TagContainerGroup } from '../Tag/styles'
 import { NotaContainer } from '../Nota/styles'
 
 export const CardContainer = styled.div`
@@ -10,7 +10,8 @@ export const CardContainer = styled.div`
   background-color: ${cores.corFundoCard};
   position: relative;
 
-  ${TagContainer} {
+  ${TagContainerGroup} {
+    position: absolute;
     top: 16px;
     right: 16px;
   }
@@ -23,6 +24,10 @@ export const CardContainer = styled.div`
 
 export const ContainerConteudo = styled.div`
   margin: 8px;
+
+  p {
+    font-size: 14px;
+  }
 `
 
 export const Button = styled.a`
