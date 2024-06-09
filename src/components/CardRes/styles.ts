@@ -33,6 +33,6 @@ export const Button = styled.button`
   border-color: ${cores.corFundoRodape};
   text-decoration: none;
   width: 100%;
-
+  border-radius: 12px;
   cursor: pointer;
 `

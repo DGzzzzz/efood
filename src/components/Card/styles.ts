@@ -38,4 +38,5 @@ export const Button = styled(Link)`
   height: 24px;
   padding: 4px 8px;
   text-decoration: none;
+  border-radius: 12px;
 `
