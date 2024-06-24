@@ -5,20 +5,34 @@ import { NotaContainer } from '../Nota/styles'
 import { Link } from 'react-router-dom'
 
 export const CardContainer = styled.div`
-  width: 472px;
-  height: 400px;
+  min-height: 400px;
   border: 1px solid ${cores.corTexto};
   background-color: ${cores.corFundoCard};
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding-bottom: 20px;
+
+  .card-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  ${TagContainerGroup}, ${NotaContainer} {
+    position: absolute;
+  }
 
   ${TagContainerGroup} {
-    position: absolute;
     top: 16px;
     right: 16px;
   }
 
   ${NotaContainer} {
-    bottom: 140px;
+    bottom: 165px;
     right: 16px;
   }
 `
