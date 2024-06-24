@@ -50,12 +50,14 @@ const CardRes = ({ id, descricao, foto, nome, preco, porcao }: Props) => {
       </ContainerConteudo>
       {isModalOpen && (
         <Modal onClose={toggleModal}>
-          <img className="card-image" src={foto} alt="" />
+          <img className="card-image-modal" src={foto} alt="" />
           <div className="content">
             <h3>{nome}</h3>
             <p>{descricao}</p>
             <p>Serve: {porcao}</p>
-            <Button>Adicionar ao carrinho - R$ {preco}</Button>
+            <Button className="modal-button">
+              Adicionar ao carrinho - R$ {preco}
+            </Button>
           </div>
         </Modal>
       )}

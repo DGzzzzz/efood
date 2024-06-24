@@ -34,7 +34,7 @@ export const ModalContent = styled.div`
   height: 344px;
   display: flex;
 
-  .card-image {
+  .card-image-modal {
     height: 280px;
     width: 280px;
     object-fit: cover;
@@ -59,9 +59,5 @@ export const ModalContent = styled.div`
       font-size: 14px;
       line-height: 22px;
     }
-  }
-
-  button {
-    max-width: 218px;
   }
 `

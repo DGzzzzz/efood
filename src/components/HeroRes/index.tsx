@@ -28,22 +28,24 @@ type MenuItem = {
 }
 
 interface Detalhes {
+  id: number
   titulo: string
-  descricao: string
+  destacado: boolean
   tipo: string
+  avaliacao: number
+  descricao: string
   capa: string
   cardapio: MenuItem[]
 }
 
 const HeroRes = () => {
   const { id } = useParams()
-  const [detalhe, setDetalhe] = useState<MenuItem | null>(null)
+  const [detalhe, setDetalhe] = useState<Detalhes | null>(null)
 
   useEffect(() => {
     if (id) {
-      getCardListRes(parseInt(id)).then((detalhes) => {
-        const destaque = detalhes.cardapio[0]
-        setDetalhe(destaque)
+      getCardListRes(parseInt(id)).then((data) => {
+        setDetalhe(data)
       })
     }
   }, [id])
@@ -62,12 +64,12 @@ const HeroRes = () => {
         <p>0 produto(s) no carrinho</p>
       </ContainerHero>
       <ImgContainer>
-        {/* Corrigido para usar detalhe.foto */}
-        <Img imageUrl={detalhe.foto} />
-        <TitleContainer>
-          <h2>{detalhe.tipo}</h2>
-          <h2>{detalhe.titulo}</h2>
-        </TitleContainer>
+        <Img imageUrl={detalhe.capa}>
+          <TitleContainer>
+            <h2>{detalhe.tipo}</h2>
+            <h2>{detalhe.titulo}</h2>
+          </TitleContainer>
+        </Img>
       </ImgContainer>
     </HeroFundo>
   )

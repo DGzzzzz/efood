@@ -9,23 +9,30 @@ export const CardContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 8px;
 
   .card-image {
-    width: 100%;
-    min-height: 167px;
+    width: calc(100% - 16px);
+    min-height: 150px;
     object-fit: cover;
-    bacgorund-size: cover;
+    background-size: cover;
+    margin: 8px;
   }
 `
 
 export const ContainerConteudo = styled.div`
-  margin: 8px;
   flex: 1;
+
+  h3,
+  p {
+    margin: 8px;
+  }
 
   h3 {
     font-size: 16px;
     color: ${cores.corFundoRodape};
   }
+
   p {
     font-size: 14px;
     color: ${cores.corFundoRodape};
@@ -35,10 +42,15 @@ export const ContainerConteudo = styled.div`
 export const Button = styled.button`
   background-color: ${cores.corFundoRodape};
   color: ${cores.corTexto};
-  padding: 4px 8px;
   border-color: ${cores.corFundoRodape};
-  text-decoration: none;
   width: 100%;
-  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  padding: 4px 0px;
   cursor: pointer;
+  border-radius: 8px;
+
+  &.modal-button {
+    max-width: 280px;
+  }
 `

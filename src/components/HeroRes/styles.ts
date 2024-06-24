@@ -1,10 +1,10 @@
-import style from 'styled-components'
+import styled from 'styled-components'
 
 interface ImgProps {
   imageUrl: string
 }
 
-export const HeroFundo = style.div`
+export const HeroFundo = styled.div`
   width: 100%;
   height: 384px;
   background-repeat: no-repeat;
@@ -16,58 +16,62 @@ export const HeroFundo = style.div`
   margin-bottom: 80px;
 `
 
-export const HeroTitle = style.h1`
+export const HeroTitle = styled.h1`
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 100;
 `
 
-export const Img = style.div<ImgProps>`
+export const Img = styled.div<ImgProps>`
   width: 100%;
-  height: 100%;
+  height: 280px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${(
-    props
-  ) => props.imageUrl});
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(${(props) => props.imageUrl});
 `
 
-export const ImgContainer = style.div`
+export const ImgContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
 `
 
-export const TitleContainer = style.div`
+export const TitleContainer = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 32px;
-  font-weight: 900;
   text-align: center;
   max-width: 1024px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
-
-  > h2 {
-    font-size: 32px;
-    font-weight: 900;
-  }
+  margin: 0;
+  gap: 64px;
 
   > h2:first-child {
     font-weight: 100;
-}
+    font-size: 32px;
+  }
+  > h2 {
+    font-weight: 900;
+    font-size: 32px;
+  }
 `
 
-export const ContainerHero = style.div`
-  width: 100%;
+export const ContainerHero = styled.div`
   display: flex;
+  max-width: 1024px;
   justify-content: space-around;
   align-items: center;
-  margin: 50px;
+  margin: auto;
+  height: 186px;
+  gap: 300px;
 `
