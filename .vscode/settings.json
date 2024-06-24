@@ -1,6 +1,14 @@
 {
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true, // Habilita a formatação ao salvar
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Define o Prettier como o formatador padrão
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
+  },
+  // Se você estiver usando TypeScript ou JavaScript, pode querer adicionar:
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
