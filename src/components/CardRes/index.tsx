@@ -1,20 +1,66 @@
+import Modal from '../Modal'
 import { Button, CardContainer, ContainerConteudo } from './styles'
 
-import comida3 from '../../assets/images/comida3.png'
+import { useEffect, useState } from 'react'
 
-const CardRes = () => {
+type Props = {
+  id: number
+  titulo: string
+  descricao: string
+  foto: string
+  nome: string
+  preco: number
+  porcao: string
+}
+
+type MenuItem = {
+  nome: string
+  descricao: string
+  foto: string
+}
+
+const CardRes = ({ id, descricao, foto, nome, preco, porcao }: Props) => {
+  const [menuItem, setMenuItem] = useState<MenuItem | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  useEffect(() => {
+    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
+      .then((response) => response.json())
+      .then((data) => setMenuItem(data))
+      .catch((error) =>
+        console.error('Erro ao buscar dados do cardápio: ', error)
+      )
+  }, [id])
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen)
+  }
+
+  if (!menuItem) {
+    return <p>Carregando...</p>
+  }
+
   return (
     <CardContainer>
-      <img src={comida3} alt="Comida" />
+      <img className="card-image" src={foto} alt="" />
       <ContainerConteudo>
-        <h3>Pizza Marguerita</h3>
-        <p>
-          A clássica Marguerita: molho de tomate suculento, mussarela derretida,
-          manjericão fresco e um toque de azeite. Sabor e simplicidade!
-        </p>
-        <Button>Adicionar ao carrinho</Button>
+        <h3>{nome}</h3>
+        <p>{descricao}</p>
+        <Button onClick={toggleModal}>Adicionar ao carrinho</Button>
       </ContainerConteudo>
+      {isModalOpen && (
+        <Modal onClose={toggleModal}>
+          <img className="card-image" src={foto} alt="" />
+          <div className="content">
+            <h3>{nome}</h3>
+            <p>{descricao}</p>
+            <p>Serve: {porcao}</p>
+            <Button>Adicionar ao carrinho - R$ {preco}</Button>
+          </div>
+        </Modal>
+      )}
     </CardContainer>
   )
 }
+
 export default CardRes

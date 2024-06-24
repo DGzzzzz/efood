@@ -3,18 +3,24 @@ import { cores } from '../../styles'
 
 export const CardContainer = styled.div`
   width: 320px;
-  height: 350px;
+  min-height: 350px;
   border: 1px solid ${cores.corTexto};
   background-color: ${cores.corTexto};
   position: relative;
+  display: flex;
+  flex-direction: column;
 
-  img {
-    padding: 8px 8px 0 8px;
+  .card-image {
+    width: 100%;
+    min-height: 167px;
+    object-fit: cover;
+    bacgorund-size: cover;
   }
 `
 
 export const ContainerConteudo = styled.div`
   margin: 8px;
+  flex: 1;
 
   h3 {
     font-size: 16px;
