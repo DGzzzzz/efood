@@ -6,7 +6,6 @@ interface ImgProps {
 
 export const HeroFundo = styled.div`
   width: 100%;
-  height: 384px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
