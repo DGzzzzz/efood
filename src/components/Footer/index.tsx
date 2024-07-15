@@ -1,29 +1,24 @@
-import logo from '../../assets/images/logo.png'
-import facebook from '../../assets/images/facebook.png'
-import instagram from '../../assets/images/instagram.png'
-import twitter from '../../assets/images/twitter.png'
-import { FooterContainer, RedesSociais } from './styles'
-
-const Rodape = () => (
-  <FooterContainer>
-    <img src={logo} alt="Logo" />
-    <RedesSociais>
-      <a href="https://www.facebook.com">
-        <img src={facebook} alt="Facebook" />
-      </a>
-      <a href="https://www.instagram.com">
-        <img src={instagram} alt="Instagram" />
-      </a>
-      <a href="https://www.twitter.com">
-        <img src={twitter} alt="Twitter" />
-      </a>
-    </RedesSociais>
-    <p>
-      A efood é uma plataforma para divulgação de estabelecimentos, a
-      responsabilidade pela entrega, qualidade dos produtos é toda do
-      estabelecimento contratado.
-    </p>
-  </FooterContainer>
+import instagram from '../../assets/images/instagram.svg'
+import facebook from '../../assets/images/facebook.svg'
+import twitter from '../../assets/images/twitter.svg'
+import logo from '../../assets/images/logo.svg'
+import * as S from './styles'
+const Footer = () => (
+  <S.FundoFooter>
+    <div className="container">
+      <S.Logo src={logo} alt="efood" />
+      <S.RedesSociais>
+        <img src={instagram} alt="instagram" />
+        <img src={facebook} alt="facebook" />
+        <img src={twitter} alt="twitter" />
+      </S.RedesSociais>
+      <S.TextoFooter>
+        A efood é uma plataforma para divulgação de estabelicementos, a
+        responsabilidade pela entrega,qualidade <br /> dos produtos é toda do
+        estabelicimento contratado
+      </S.TextoFooter>
+    </div>
+  </S.FundoFooter>
 )
 
-export default Rodape
+export default Footer

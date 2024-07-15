@@ -1,28 +1,41 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  corFundo: '#FFF8F2',
-  corTexto: '#E66767',
-  corFundoCard: '#fff',
-  corFundoRodape: '#FFEBD9'
+  rosa: '#E66767',
+  branca: '#FFFFFF',
+  amarelo: '#FFB930',
+  brancaEscura: '#FFEBD9'
 }
 
-export const GlobalStyles = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-  }
+export const breakpoints = {
+  mobile: '676px',
+  tablet: '768px'
+}
 
-  body {
-    background-color: ${cores.corFundo};
-    color: ${cores.corTexto};
-  }
+export const GlobalCss = createGlobalStyle`
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Roboto,sans-serif ;
+list-style: none;
+}
+body{
+  background-color: ${cores.branca};
+  color:${cores.rosa};
 
-  .container {
-    max-width: 1024px;
+
+}
+.container{
     width: 100%;
     margin: 0 auto;
-  }
+    @media (max-width: ${breakpoints.mobile}) {
+      max-width: 92%;
+      padding: 0 auto;
+    }
+    @media (min-width: ${breakpoints.tablet}) and (max-width: 1020px) {
+      max-width: 95%;
+      padding: 0 auto;
+    }
+}
 `

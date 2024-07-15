@@ -1,19 +1,26 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 
-export const FooterContainer = styled.footer`
-  background-color: ${cores.corFundoRodape};
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 80px;
+export const FundoFooter = styled.footer`
+  padding: 40px 0;
+  background-color: ${cores.brancaEscura};
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
+export const Logo = styled.img`
+  padding-bottom: 32.5px;
+`
 export const RedesSociais = styled.div`
-  margin-top: 32px;
   display: flex;
   gap: 8px;
   margin-bottom: 80px;
+`
+export const TextoFooter = styled.p`
+  font-size: 10px;
+  width: 90%;
+  text-align: center;
 `

@@ -1,15 +1,22 @@
-import CardList from '../../components/CardList'
-import Rodape from '../../components/Footer'
-import Hero from '../../components/Hero'
+import CategoryList from '../../containers/CategoryList'
+import HeaderHome from '../../components/HeaderHome'
 
-const Home = () => (
-  <>
-    <Hero />
-    <div className="container">
-      <CardList />
-    </div>
-    <Rodape />
-  </>
-)
+import { useGetRestaurantsQuery } from '../../Services/api'
+import Loader from '../../components/Loaders'
 
+const Home = () => {
+  const { data: categoriesList } = useGetRestaurantsQuery()
+  if (!categoriesList) {
+    return <Loader />
+  }
+
+  return (
+    <>
+      <HeaderHome />
+      <div className="container">
+        <CategoryList categories={categoriesList} />
+      </div>
+    </>
+  )
+}
 export default Home

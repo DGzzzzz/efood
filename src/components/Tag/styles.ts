@@ -1,19 +1,12 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
+import { Props } from './index'
 
-export const TagContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  height: 24px;
-  background-color: ${cores.corTexto};
-  border-radius: 12px;
-  color: ${cores.corFundo};
+export const TagContainer = styled.div<Props>`
+  background-color: ${cores.rosa};
+  color: ${cores.branca};
+  height: 26px;
+  width: 61px;
   font-size: 12px;
-  font-weight: 700;
-`
-export const TagContainerGroup = styled.div`
-  display: flex;
-  gap: 10px;
+  padding: 4px 6px;
 `
