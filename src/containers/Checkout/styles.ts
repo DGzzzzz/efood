@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import { ButtonContainer } from '../../components/Button/styles'
 
 type InputGroupProps = {
@@ -43,7 +43,7 @@ export const SiderBar = styled.aside`
     max-width: 250px;
   }
   ${ButtonContainer} {
-    background-color: ${cores.brancaEscura};
+    background-color: ${colors.whiteOff};
     height: 24px;
     margin-bottom: 8px;
     max-width: 344px;
@@ -53,7 +53,7 @@ export const SiderBar = styled.aside`
     }
   }
   .text-cart {
-    color: ${cores.brancaEscura};
+    color: ${colors.whiteOff};
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
@@ -62,7 +62,7 @@ export const SiderBar = styled.aside`
     margin-bottom: 16px;
   }
   h3 {
-    color: ${cores.brancaEscura};
+    color: ${colors.whiteOff};
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
@@ -71,7 +71,7 @@ export const SiderBar = styled.aside`
     margin-bottom: 16px;
   }
   p {
-    color: ${cores.brancaEscura};
+    color: ${colors.whiteOff};
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
@@ -102,15 +102,15 @@ export const InputGroup = styled.div<InputGroupProps>`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    color: ${cores.brancaEscura};
+    color: ${colors.whiteOff};
   }
   input {
     width: 100%;
     height: 32px;
     padding: 0 8px;
     font-weight: bold;
-    border: 1px solid ${cores.brancaEscura};
-    background-color: ${cores.brancaEscura};
+    border: 1px solid ${colors.whiteOff};
+    background-color: ${colors.whiteOff};
     &.error {
       border: 4px solid red;
     }

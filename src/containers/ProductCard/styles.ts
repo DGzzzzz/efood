@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import { ButtonContainer } from '../../components/Button/styles'
 
 export const Card = styled.div`
-  background-color: ${cores.rosa};
+  background-color: ${colors.pink};
   padding: 8px;
   width: 320px;
-  color: ${cores.branca};
+  color: ${colors.white};
   margin-bottom: 32px;
   position: relative;
   > img {
@@ -28,9 +28,9 @@ export const Card = styled.div`
 
   button {
     width: 100%;
-    background-color: ${cores.brancaEscura};
+    background-color: ${colors.whiteOff};
     border: none;
-    color: ${cores.rosa};
+    color: ${colors.pink};
     font-weight: bold;
     padding: 4px 0;
     cursor: pointer;
@@ -53,7 +53,7 @@ export const Modal = styled.div`
   display: flex;
 `
 export const ModalContainer = styled.div`
-  color: ${cores.branca};
+  color: ${colors.white};
   max-width: 1024px;
   height: 334px;
   flex-shrink: 0;
@@ -126,11 +126,11 @@ export const ModalContainer = styled.div`
   }
 
   ${ButtonContainer} {
-    background-color: ${cores.brancaEscura};
+    background-color: ${colors.whiteOff};
     padding: 4px 8px;
     font-size: 14px;
     border: none;
-    color: ${cores.rosa};
+    color: ${colors.pink};
     font-weight: bold;
     cursor: pointer;
     width: 218px;
@@ -140,9 +140,7 @@ export const ModalContainer = styled.div`
       margin-bottom: 20px; // Aplica a margem inferior especificamente para o ButtonContainer em dispositivos móveis
     }
   }
-
-
-  }
+}
 `
 
 export const Overlay = styled.div`

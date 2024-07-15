@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const ImagemBanner = styled.div`
   width: 100%;
   height: 280px;
   display: block;
-  color: ${cores.branca};
+  color: ${colors.white};
   margin-bottom: 56px;
   position: relative;
   object-fit: cover;

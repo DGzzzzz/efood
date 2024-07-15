@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const cores = {
-  rosa: '#E66767',
-  branca: '#FFFFFF',
-  amarelo: '#FFB930',
-  brancaEscura: '#FFEBD9'
+export const colors = {
+  pink: '#E66767',
+  white: '#FFFFFF',
+  yellow: '#FFB930',
+  whiteOff: '#FFEBD9'
 }
 
 export const breakpoints = {
@@ -21,8 +21,8 @@ font-family: Roboto,sans-serif ;
 list-style: none;
 }
 body{
-  background-color: ${cores.branca};
-  color:${cores.rosa};
+  background-color: ${colors.white};
+  color:${colors.pink};
 
 
 }

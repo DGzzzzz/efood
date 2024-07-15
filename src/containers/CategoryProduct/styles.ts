@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import { TagContainer } from '../../components/Tag/styles'
 import { ButtonLink } from '../../components/Button/styles'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Card = styled.div`
-  background-color: ${cores.branca};
+  background-color: ${colors.white};
   width: 472px;
   height: 398px;
   position: relative;
-  border: 1px solid ${cores.rosa};
+  border: 1px solid ${colors.pink};
 
   ${TagContainer} {
     cursor: pointer;

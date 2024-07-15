@@ -1,11 +1,11 @@
 import { ClockLoader } from 'react-spinners'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { Container } from './styles'
 
 const Loader = () => {
   return (
     <Container>
-      <ClockLoader color={cores.rosa} />
+      <ClockLoader color={colors.pink} />
     </Container>
   )
 }

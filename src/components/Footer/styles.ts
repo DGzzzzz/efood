@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const FundoFooter = styled.footer`
   padding: 40px 0;
-  background-color: ${cores.brancaEscura};
+  background-color: ${colors.whiteOff};
   .container {
     display: flex;
     flex-direction: column;
