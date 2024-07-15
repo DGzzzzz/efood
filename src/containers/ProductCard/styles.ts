@@ -35,6 +35,10 @@ export const Card = styled.div`
     padding: 4px 0;
     cursor: pointer;
   }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+  }
 `
 
 export const Modal = styled.div`
@@ -64,10 +68,11 @@ export const ModalContainer = styled.div`
   }
   @media (max-width: ${breakpoints.mobile}) {
     display: block;
-    height: 85vh;
-    width: 350px;
-    overflow-y: scroll;
-    padding-bottom: 5px;
+    height: auto;
+    max-height: 85vh;
+    width: 90%;
+    overflow-y: auto;
+    margin: 10vh auto;
   }
   header {
     display: flex;
@@ -130,6 +135,13 @@ export const ModalContainer = styled.div`
     cursor: pointer;
     width: 218px;
     height: 24px;
+
+    @media (max-width: ${breakpoints.mobile}) {
+      margin-bottom: 20px; // Aplica a margem inferior especificamente para o ButtonContainer em dispositivos móveis
+    }
+  }
+
+
   }
 `
 

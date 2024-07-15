@@ -13,6 +13,7 @@ export const TextContainer = styled.div`
   margin: auto;
   height: 186px;
   gap: 300px;
+
   a,
   img {
     cursor: pointer;
