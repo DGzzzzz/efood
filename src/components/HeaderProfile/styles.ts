@@ -13,18 +13,18 @@ export const TextContainer = styled.div`
   margin: auto;
   height: 186px;
   gap: 300px;
-  a {
+  a,
+  img {
     cursor: pointer;
     text-align: center;
     display: flex;
-    @media (max-width: ${breakpoints.mobile}) {
-      display: flex;
-      text-align: center;
-    }
   }
   @media (max-width: ${breakpoints.mobile}) {
-    width: 8%;
-    gap: 45px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
   }
   @media (min-width: ${breakpoints.tablet}) and (max-width: 1020px) {
     width: 50%;

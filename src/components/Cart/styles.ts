@@ -31,19 +31,17 @@ export const SiderBar = styled.aside`
   max-width: 360px;
   width: 100%;
   @media (max-width: ${breakpoints.mobile}) {
-    max-width: 250px;
+    max-width: 70%;
   }
   ${ButtonContainer} {
     background-color: ${cores.brancaEscura};
     height: 24px;
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-top: 16px;
-    margin-bottom: 1164px;
+    margin: 16px 8px;
     max-width: 344px;
     width: 100%;
     @media (max-width: ${breakpoints.mobile}) {
-      width: 92%;
+      width: 100%;
+      margin: 8px;
     }
   }
   .text-cart {
@@ -64,7 +62,9 @@ export const CartItem = styled.li`
   background-color: #ffebd9;
   display: flex;
   @media (max-width: ${breakpoints.mobile}) {
-    width: 92%;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 8px;
   }
   h3 {
     color: #e66767;
@@ -79,7 +79,7 @@ export const CartItem = styled.li`
     margin-left: 8px;
     @media (max-width: ${breakpoints.mobile}) {
       margin-left: 2px;
-      text-align: start;
+      text-align: center;
     }
   }
   p {
@@ -90,8 +90,11 @@ export const CartItem = styled.li`
     font-weight: 400;
     line-height: 22px;
     margin-left: 8px;
-
     margin-bottom: 33px;
+
+    @media (max-width: ${breakpoints.mobile}) {
+      text-align: center; // Centraliza o texto para uma melhor leitura
+    }
   }
 
   button {
@@ -103,26 +106,32 @@ export const CartItem = styled.li`
     position: absolute;
     bottom: 12px;
     right: 12px;
+
+    @media (max-width: ${breakpoints.mobile}) {
+      position: static;
+      margin: 8px 8px 22px;
+    }
   }
   img {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    margin-right: 8px;
     border-radius: 8px;
-    margin-top: 8px;
-    margin-left: 8px;
-    margin-bottom: 12px;
+    margin: 8px 8px 12px;
+
+    @media (max-width: ${breakpoints.mobile}) {
+      margin: 8px auto;
+    }
   }
 `
 export const PricesCard = styled.div`
-  padding-right: 8px;
-  padding-left: 8px;
-  padding-top: 40px;
-  padding-bottom: 16px;
+  padding: 40px 8px 16px;
   display: flex;
   justify-content: space-between;
   span {
     color: #ffebd9;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: 20px 4px 8px;
   }
 `
