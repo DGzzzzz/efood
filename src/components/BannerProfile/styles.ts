@@ -35,6 +35,7 @@ export const Title = styled.h1`
   padding-bottom: 156px;
   @media (max-width: ${breakpoints.mobile}) {
     margin-left: 2px;
+    padding-left: 16px;
   }
   @media (min-width: ${breakpoints.tablet}) and (max-width: 1020px) {
     margin-left: 8px;
@@ -45,6 +46,7 @@ export const Subtitle = styled.h2`
   font-weight: 900;
   @media (max-width: ${breakpoints.mobile}) {
     margin-left: 2px;
+    padding-left: 16px;
   }
   @media (min-width: ${breakpoints.tablet}) and (max-width: 1020px) {
     margin-left: 8px;
