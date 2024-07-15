@@ -40,7 +40,7 @@ export const SiderBar = styled.aside`
   padding: 32px 8px 0 8px;
   width: 100%;
   @media (max-width: ${breakpoints.mobile}) {
-    max-width: 250px;
+    max-width: 70%;
   }
   ${ButtonContainer} {
     background-color: ${colors.whiteOff};
